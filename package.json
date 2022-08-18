@@ -1,0 +1,15 @@
+{
+  "name": "lambda-circuit-breaker",
+  "private": true,
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "workspaces": {
+    "packages": [
+      "infrastructure",
+      "application/api"
+    ]
+  },
+  "engines": {
+    "node": ">=14.0"
+  }
+}
