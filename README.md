@@ -64,3 +64,4 @@ you need to have valid AWS AccessCredentials in order to meet Terraforms require
 * [DynamoDb Admin](https://github.com/aaronshaf/dynamodb-admin)
 * [cdktf](https://www.terraform.io/cdktf)
 * [Localstack](https://localstack.cloud/)
+* Social preview image by [Greg Bullar](https://unsplash.com/photos/Xlz-BS1BP_Q)
