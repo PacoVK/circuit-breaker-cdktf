@@ -7,9 +7,11 @@ jobs:
     container: node:16-bullseye
     steps:
       - uses: actions/checkout@v3
+      - uses: hashicorp/setup-terraform@v2
       - name: Jest
         working-directory: infrastructure
         run: |
+          yarn global install cdktf-cli
           yarn install
           yarn get
           yarn test
