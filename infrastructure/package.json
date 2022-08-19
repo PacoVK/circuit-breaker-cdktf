@@ -24,7 +24,7 @@
     "dotenv": "^16.0.1"
   },
   "devDependencies": {
-    "@types/jest": "28.1.6",
+    "@types/jest": "28.1.7",
     "@types/node": "18.7.2",
     "cdktf-cli": "0.12.1",
     "jest": "28.1.3",
