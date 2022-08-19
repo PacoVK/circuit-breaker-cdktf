@@ -10,8 +10,8 @@ jobs:
       - uses: hashicorp/setup-terraform@v2
       - name: Jest
         run: |
-          yarn global add cdktf-cli
-          yarn install
           cd infrastructure
+          yarn global add cdktf-cli
+          yarn --cwd ../application install && yarn install
           yarn get
           yarn test
