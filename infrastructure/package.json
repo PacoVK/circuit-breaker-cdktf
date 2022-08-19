@@ -14,8 +14,8 @@
     "synth": "cdktf synth",
     "compile": "tsc --pretty",
     "watch": "tsc -w",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "yarn --cwd ../application build && jest",
+    "test:watch": "yarn --cwd ../application build && jest --watch"
   },
   "dependencies": {
     "@cdktf/provider-aws": "^9.0.13",
