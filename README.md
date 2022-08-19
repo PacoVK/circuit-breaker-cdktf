@@ -20,11 +20,11 @@ is very relevant to optimize here.
 
 Basically a simple circuit-breaker has the following flow:
 
-![Flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/PacoVK/circuit-breaker-cdktf/main/docs/flow.puml)
+![Flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/PacoVK/circuit-breaker-cdktf/main/docs/flow.iuml)
 
 Designed in AWS it could look like this:
 
-![Technical view](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/PacoVK/circuit-breaker-cdktf/main/docs/technical_view.puml)
+![Technical view](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/PacoVK/circuit-breaker-cdktf/main/docs/technical_view.iuml)
 
 ## How to use
 
