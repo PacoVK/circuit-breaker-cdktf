@@ -14,8 +14,7 @@ jobs:
     env:
       AWS_ACCESS_KEY_ID: fake
       AWS_SECRET_ACCESS_KEY: fake
-      AWS_ENDPOINT: localstack:4566
-      NODE_TLS_REJECT_UNAUTHORIZED: 0
+      AWS_ENDPOINT: http://localstack:4566
     steps:
       - uses: actions/checkout@v3
       - name: Jest
