@@ -11,7 +11,7 @@ jobs:
       - name: Jest
         working-directory: infrastructure
         run: |
-          yarn global install cdktf-cli
+          yarn global add cdktf-cli
           yarn install
           yarn get
           yarn test
