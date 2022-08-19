@@ -20,64 +20,11 @@ is very relevant to optimize here.
 
 Basically a simple circuit-breaker has the following flow:
 
-```puml
-start
-
-:invoke fancy API handler;
-if (Circuit is open) then (yes)
-    :Call external 
-    Cat Facts API;
-    if (Cat Facts API is 
-    slow/ down) then (yes)
-        :Abort after 
-        timeout;
-        :Increment error 
-        counter;
-    else (no)
-    endif
-else (no)
-endif
-:return response;
-stop
-```
+![Flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/PacoVK/circuit-breaker-cdktf/main/docs/flow.puml)
 
 Designed in AWS it could look like this:
 
-```puml
-@startuml Technical View
-
-!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v13.1/dist
-!include AWSPuml/AWSCommon.puml
-!include AWSPuml/AWSSimplified.puml
-
-!include AWSPuml/General/Users.puml
-!include AWSPuml/ApplicationIntegration/APIGateway.puml
-!include AWSPuml/ApplicationIntegration/SimpleNotificationService.puml
-!include AWSPuml/SecurityIdentityCompliance/Cognito.puml
-!include AWSPuml/Compute/Lambda.puml
-!include AWSPuml/Database/DynamoDB.puml
-!include AWSPuml/General/Traditionalserver.puml
-
-left to right direction
-
-Users(sources, "Users", "")
-APIGateway(fancyAPI, "Fancy API", "")
-Lambda(processor, "Processor", "")
-Lambda(errorHandler, "Error handler", "")
-SimpleNotificationService(sns, "Messaging system", "")
-DynamoDB(errorDB, "Service Error DB", "")
-Traditionalserver(otherApi, "Cat Facts API", "")
-
-sources --> fancyAPI : call
-fancyAPI --> processor : invoke
-processor --> otherApi : request
-processor <-- otherApi : response
-processor --> sns : send failure message
-sns --> errorHandler : invoke
-errorHandler --> errorDB : put an error with TTL
-processor --> errorDB : check if there are errors 
-@enduml
-```
+![Technical view](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/PacoVK/circuit-breaker-cdktf/main/docs/technical_view.puml)
 
 ## How to use
 

@@ -1,0 +1,20 @@
+@startuml flow
+start
+
+:invoke fancy API handler;
+if (Circuit is open) then (yes)
+    :Call external
+    Cat Facts API;
+    if (Cat Facts API is
+    slow/ down) then (yes)
+        :Abort after
+        timeout;
+        :Increment error
+        counter;
+    else (no)
+    endif
+else (no)
+endif
+:return response;
+stop
+@enduml
