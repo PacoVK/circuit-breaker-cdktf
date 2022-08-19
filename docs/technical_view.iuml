@@ -1,0 +1,33 @@
+@startuml Technical view
+
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v13.1/dist
+!include AWSPuml/AWSCommon.puml
+!include AWSPuml/AWSSimplified.puml
+
+!include AWSPuml/General/Users.puml
+!include AWSPuml/ApplicationIntegration/APIGateway.puml
+!include AWSPuml/ApplicationIntegration/SimpleNotificationService.puml
+!include AWSPuml/SecurityIdentityCompliance/Cognito.puml
+!include AWSPuml/Compute/Lambda.puml
+!include AWSPuml/Database/DynamoDB.puml
+!include AWSPuml/General/Traditionalserver.puml
+
+left to right direction
+
+Users(sources, "Users", "")
+APIGateway(fancyAPI, "Fancy API", "")
+Lambda(processor, "Processor", "")
+Lambda(errorHandler, "Error handler", "")
+SimpleNotificationService(sns, "Messaging system", "")
+DynamoDB(errorDB, "Service Error DB", "")
+Traditionalserver(otherApi, "Cat Facts API", "")
+
+sources --> fancyAPI : call
+fancyAPI --> processor : invoke
+processor --> otherApi : request
+processor <-- otherApi : response
+processor --> sns : send failure message
+sns --> errorHandler : invoke
+errorHandler --> errorDB : put an error with TTL
+processor --> errorDB : check if there are errors
+@enduml
