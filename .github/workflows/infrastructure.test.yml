@@ -4,7 +4,7 @@ on: push
 jobs:
   unit:
     runs-on: ubuntu-latest
-    container: node:16-bullseye
+    container: node:18-bullseye
     steps:
       - uses: actions/checkout@v3
       - uses: hashicorp/setup-terraform@v2
