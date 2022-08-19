@@ -1,0 +1,14 @@
+name: Infrastructure tests
+on: push
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    container: node:16-bullseye
+    steps:
+      - name: Jest
+        working-directory: infrastructure
+        run: |
+          yarn install
+          yarn get
+          yarn test
