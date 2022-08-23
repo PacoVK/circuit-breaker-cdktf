@@ -7,6 +7,13 @@ jobs:
     container: node:18-bullseye
     steps:
       - uses: actions/checkout@v3
+
+      - name: configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: eu-central-1
+
       - uses: hashicorp/setup-terraform@v2
         with:
           terraform_wrapper: false
