@@ -1,5 +1,8 @@
 # README #
 
+![Application Tests](https://github.com/PacoVK/circuit-breaker-cdktf/actions/workflows/application.test.yml/badge.svg?branch=main)
+![Infrastructure Tests](https://github.com/PacoVK/circuit-breaker-cdktf/actions/workflows/infrastructure.test.yml/badge.svg?branch=main)
+
 This repo contains a simple reference implementation of a [ciruit-breaker](https://martinfowler.com/bliki/CircuitBreaker.html) in AWS using **Lambda**, **SNS**, and **DynamoDB**.
 
 ## Technology
