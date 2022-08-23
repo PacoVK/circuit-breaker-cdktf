@@ -5,6 +5,9 @@ jobs:
   unit:
     runs-on: ubuntu-latest
     container: node:18-bullseye
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v3
 
