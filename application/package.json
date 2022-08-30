@@ -19,7 +19,7 @@
     "@types/jest": "28.1.8",
     "@types/node": "18.7.3",
     "dotenv": "16.0.1",
-    "esbuild": "0.15.5",
+    "esbuild": "0.15.6",
     "jest": "29.0.1",
     "mock-aws-events": "1.0.1",
     "prettier": "2.7.1",
