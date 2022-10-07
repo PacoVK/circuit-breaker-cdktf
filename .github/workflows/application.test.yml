@@ -7,7 +7,7 @@ jobs:
     container: node:18-bullseye
     services:
       localstack:
-        image: localstack/localstack:1.1.0
+        image: localstack/localstack:1.2.0
         env:
           SERVICES: sqs,sns,dynamodb
           EXTRA_CORS_ALLOWED_ORIGINS: "*"
