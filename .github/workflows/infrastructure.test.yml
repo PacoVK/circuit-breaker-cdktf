@@ -4,7 +4,7 @@ on: push
 jobs:
   unit:
     runs-on: ubuntu-latest
-    container: node:18-bullseye
+    container: node:19-bullseye
     permissions:
       contents: read
       id-token: write

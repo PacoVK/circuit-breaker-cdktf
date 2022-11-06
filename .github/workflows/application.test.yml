@@ -4,7 +4,7 @@ on: push
 jobs:
   unit:
     runs-on: ubuntu-latest
-    container: node:18-bullseye
+    container: node:19-bullseye
     services:
       localstack:
         image: localstack/localstack:1.2.0
