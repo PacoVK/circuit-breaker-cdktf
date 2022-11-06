@@ -1,13 +1,14 @@
 import { Construct } from "constructs";
 import { TerraformOutput, TerraformStack } from "cdktf";
-import { AwsProvider } from "@cdktf/provider-aws";
 import { Lambda } from "./lambda";
-import { Apigatewayv2Api } from "@cdktf/provider-aws/lib/apigatewayv2";
-import { LambdaPermission } from "@cdktf/provider-aws/lib/lambdafunction";
-import { DataAwsIamPolicyDocument } from "@cdktf/provider-aws/lib/iam";
-import { SnsTopic, SnsTopicSubscription } from "@cdktf/provider-aws/lib/sns";
 import { VpcConfig } from "../../types";
-import { DataAwsSubnets } from "@cdktf/provider-aws/lib/vpc";
+import { Apigatewayv2Api } from "@cdktf/provider-aws/lib/apigatewayv2-api";
+import { SnsTopic } from "@cdktf/provider-aws/lib/sns-topic";
+import { DataAwsSubnets } from "@cdktf/provider-aws/lib/data-aws-subnets";
+import { DataAwsIamPolicyDocument } from "@cdktf/provider-aws/lib/data-aws-iam-policy-document";
+import { LambdaPermission } from "@cdktf/provider-aws/lib/lambda-permission";
+import { SnsTopicSubscription } from "@cdktf/provider-aws/lib/sns-topic-subscription";
+import { AwsProvider } from "@cdktf/provider-aws/lib/provider";
 
 export class HarbourApp extends TerraformStack {
   constructor(

@@ -14,7 +14,6 @@ describe("Application code test", () => {
       expect(Testing.fullSynth(stack)).toBeValidTerraform();
     });
 
-
     it("check if this can be planned", () => {
       const app = Testing.app();
       const stack = new HarbourApp(app, "application", "*", {

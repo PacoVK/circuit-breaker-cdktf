@@ -15,7 +15,8 @@
     "compile": "tsc --pretty",
     "watch": "tsc -w",
     "test": "yarn --cwd ../application build && jest",
-    "test:watch": "yarn --cwd ../application build && jest --watch"
+    "test:watch": "yarn --cwd ../application build && jest --watch",
+    "prettier": "prettier ."
   },
   "dependencies": {
     "@cdktf/provider-aws": "^10.0.0",

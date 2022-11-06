@@ -1,7 +1,7 @@
 import { Construct } from "constructs";
 import { TerraformStack } from "cdktf";
 import { Vpc } from "../../.gen/modules/vpc";
-import { AwsProvider } from "@cdktf/provider-aws";
+import { AwsProvider } from "@cdktf/provider-aws/lib/provider";
 
 export class HarbourVPC extends TerraformStack {
   public vpc: Vpc;

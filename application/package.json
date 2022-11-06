@@ -7,7 +7,8 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "build": "node esbuild.js"
+    "build": "node esbuild.js",
+    "prettier": "prettier ."
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^1.1.0",

@@ -1,8 +1,9 @@
 import { Construct } from "constructs";
-import { LambdaFunction } from "@cdktf/provider-aws/lib/lambdafunction";
-import { DataAwsIamPolicyDocument, IamRole } from "@cdktf/provider-aws/lib/iam";
 import { AssetType, TerraformAsset } from "cdktf";
 import { VpcConfig } from "../../types";
+import { IamRole } from "@cdktf/provider-aws/lib/iam-role";
+import { DataAwsIamPolicyDocument } from "@cdktf/provider-aws/lib/data-aws-iam-policy-document";
+import { LambdaFunction } from "@cdktf/provider-aws/lib/lambda-function";
 
 export class Lambda {
   public iamRole;

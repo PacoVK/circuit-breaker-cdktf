@@ -1,7 +1,7 @@
 import { Construct } from "constructs";
 import { TerraformStack } from "cdktf";
-import { AwsProvider } from "@cdktf/provider-aws";
-import { DynamodbTable } from "@cdktf/provider-aws/lib/dynamodb";
+import { DynamodbTable } from "@cdktf/provider-aws/lib/dynamodb-table";
+import { AwsProvider } from "@cdktf/provider-aws/lib/provider";
 
 export class HarbourDB extends TerraformStack {
   public dynamodbTable: DynamodbTable;
