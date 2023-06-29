@@ -16,9 +16,7 @@
   integrity sha512-SHbdUH7S2keBJQbAgXENbu1bVemHfSPvNZBvgiK1yoT7WYffl8qey3amP6GAgZA2761bhy9XawI2apOqaGHWBA==
 
 "@aws-lambda-powertools/logger@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@aws-lambda-powertools/logger/-/logger-1.1.0.tgz#2def3b0084666bff7250921d1c03efb37fd69270"
-  integrity sha512-2iaeqrPuodZGxEt4Cbag8OGRsE2ujakNjb5laMneo3mNTpQhEKG4E5W266xeTe66xF4uR8v3rDyu9fIdpKHwFw==
+  version "1.11.0"
   dependencies:
     "@aws-lambda-powertools/commons" "^1.1.0"
     lodash.clonedeep "^4.5.0"
