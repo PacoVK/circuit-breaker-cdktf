@@ -13,7 +13,7 @@
   "dependencies": {
     "@aws-lambda-powertools/logger": "^1.1.0",
     "aws-sdk": "^2.1194.0",
-    "axios": "^1.0.0"
+    "axios": "^1.1.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "8.10.108",
